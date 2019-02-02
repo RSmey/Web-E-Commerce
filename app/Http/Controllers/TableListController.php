@@ -145,7 +145,7 @@ class TableListController extends Controller
         echo "Successful....!".$datas->name."/ ". $datas->type."/ ".$datas->companies."/ ".
         $datas->price."/ ".$datas->description."/ ".$datas->image;
         
-        return redirect('/list_data');
+        return redirect('/admin');
     }
 
     /**
@@ -159,6 +159,6 @@ class TableListController extends Controller
         //
         Product::where('id', $id)->delete();
 
-        return redirect('list_data');
+        return redirect('admin');
     }
 }
